@@ -39,6 +39,8 @@ let isSuperhero = true;
 let specialPowers = ["x-ray vision", "teleportation", "super strength"];
 let favoriteFood = "tacos";
 
+const characterDescription = document.querySelector("#characterDescription");
+
 
 
 // Function to generate a random character description
