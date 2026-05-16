@@ -47,6 +47,15 @@ const characterDescription = document.querySelector("#characterDescription");
 
 
 // Functions to update character's age
+function increaseAge() {
+    age++;
+    updateCharacterDescription();
+}
+
+function decreaseAge() {
+    age--;
+    updateCharacterDescription();
+}
 
 
 // Function to change character name (it says so in the lab 1 instructions)
@@ -69,4 +78,6 @@ function updateCharacterDescription() {
 updateCharacterDescription();
 
 // Add event listeners for buttons using querySelector
+document.querySelector("#increaseAgeButton").addEventListener("click", increaseAge);
+document.querySelector("#decreaseAgeButton").addEventListener("click", decreaseAge);
 
