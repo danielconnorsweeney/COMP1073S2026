@@ -59,7 +59,10 @@ function decreaseAge() {
 
 
 // Function to change character name (it says so in the lab 1 instructions)
-
+function changeName(){
+    characterName = document.querySelector("#nameInput").value;
+    updateCharacterDescription();
+}
 
 // Function to update the character's description after changing age
 function updateCharacterDescription() {
@@ -80,4 +83,5 @@ updateCharacterDescription();
 // Add event listeners for buttons using querySelector
 document.querySelector("#increaseAgeButton").addEventListener("click", increaseAge);
 document.querySelector("#decreaseAgeButton").addEventListener("click", decreaseAge);
+document.querySelector("#changeNameButton").addEventListener("click", changeName);
 
