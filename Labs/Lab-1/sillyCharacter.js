@@ -44,6 +44,24 @@ const characterDescription = document.querySelector("#characterDescription");
 
 
 // Function to generate a random character description
+function generateRandomDescription() {
+    let names = ["Captain Underpants", "Johnny Test", "Banana Man", "Cherry Lady"];
+    let foods = ["pizza", "ice cream sundae", "wagyu steak", "rotten mushrooms"];
+    let powers = ["turn into a squirrel", "reverse time", "super stretch", "breathe fire"];
+
+    age = Math.floor(Math.random() * 100) + 1;
+    characterName = names[Math.floor(Math.random() * names.length)];
+    let randomHero = Math.floor(Math.random() * 100) + 1;
+    if (randomHero >= 50){
+        isSuperhero = true;
+    } else {
+        isSuperhero = false;
+    }
+    favoriteFood = foods[Math.floor(Math.random() * foods.length)];
+    specialPowers = [powers[Math.floor(Math.random() * powers.length)]];
+
+    updateCharacterDescription();
+}
 
 
 // Functions to update character's age
@@ -74,7 +92,7 @@ function updateCharacterDescription() {
         hero = "superhero";
     }
 
-    characterDescription.innerText = "Say hello to " + characterName + ", a goofy " + age + " year old " + hero + " who loves to munch on " + favoriteFood + " and super powers includes but not limited to " + specialPowers[1] + ".";
+    characterDescription.innerText = "Say hello to " + characterName + ", a goofy " + age + " year old " + hero + " who loves to munch on " + favoriteFood + " and super powers includes but not limited to " + specialPowers[0] + ".";
 }
 
 // calling updateCharacterDescription so user can see default one when the page loads.
@@ -84,4 +102,5 @@ updateCharacterDescription();
 document.querySelector("#increaseAgeButton").addEventListener("click", increaseAge);
 document.querySelector("#decreaseAgeButton").addEventListener("click", decreaseAge);
 document.querySelector("#changeNameButton").addEventListener("click", changeName);
+document.querySelector("#generateButton").addEventListener("click", generateRandomDescription);
 
