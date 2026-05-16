@@ -49,10 +49,24 @@ const characterDescription = document.querySelector("#characterDescription");
 // Functions to update character's age
 
 
+// Function to change character name (it says so in the lab 1 instructions)
 
 
 // Function to update the character's description after changing age
+function updateCharacterDescription() {
+    let hero; 
 
+    if (!isSuperhero) {
+        hero = "average joe";
+    } else {
+        hero = "superhero";
+    }
+
+    characterDescription.innerText = "Say hello to " + characterName + ", a goofy " + age + " year old " + hero + " who loves to munch on " + favoriteFood + " and super powers includes but not limited to " + specialPowers[1] + ".";
+}
+
+// calling updateCharacterDescription so user can see default one when the page loads.
+updateCharacterDescription();
 
 // Add event listeners for buttons using querySelector
 
