@@ -87,14 +87,51 @@ function changeRisk(){
     riskDisplay.textContent = selectedRisk;
 }
 
-
-
-
-
-
 // EVENT LISTENERS
 agentButton.addEventListener("click", changeAgent);
 locationButton.addEventListener("click", changeLocation);
 weaponButton.addEventListener("click", changeWeapon);
 objectiveButton.addEventListener("click", changeObjective);
 riskButton.addEventListener("click", changeRisk);
+launchButton.addEventListener("click", generateMission);
+resetButton.addEventListener("click", resetMission);
+
+
+// final mission briefing 
+function generateMission(){
+    if (selectedAgent === "" || selectedLocation === "" || selectedWeapon === "" || selectedObjective === "" || selectedRisk === ""){
+        briefingMessage.textContent = "All mission selections must be completed to initiate mission";
+    } else {
+        briefingMessage.textContent = 
+        `MISSION BRIEFING
+        
+        Agent: ${selectedAgent}
+        Location: ${selectedLocation}
+        Weapon: ${selectedWeapon}
+        Objective ${selectedObjective}
+        Risk ${selectedRisk}`;
+    }
+}
+
+// reset mission
+function resetMission(){
+  agentIndex = -1;
+  locationIndex = -1;
+  weaponIndex = -1;
+  objectiveIndex = -1;
+  riskIndex = -1;
+
+  selectedAgent = "";
+  selectedLocation = "";
+  selectedWeapon = "";
+  selectedObjective = "";
+  selectedRisk = "";
+
+  agentDisplay.textContent = "Not selected";
+  locationDisplay.textContent = "Not selected";
+  weaponDisplay.textContent = "Not selected";
+  objectiveDisplay.textContent = "Not selected";
+  riskDisplay.textContent = "Not selected";
+
+  briefingMessage.textContent = "";
+}
