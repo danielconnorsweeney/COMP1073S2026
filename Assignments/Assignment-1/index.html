@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mission Control</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+
+        <main class="container">
+            <h1>MISSION CONTROL GENERATOR</h1>
+            <p>Generate your mission briefing below</p>
+
+            <section class="mission-info">
+                <div>
+                    <button id="agent-button">Select Agent</button>
+                    <span id="agent-display">Not selected</span>
+                </div>
+
+                <div>
+                    <button id="location-button">Select Location</button>
+                    <span id="location-display">Not selected</span>
+                </div>
+
+                <div>
+                    <button id="weapon-button">Select Weapon</button>
+                    <span id="weapon-display">Not selected</span>
+                </div>
+
+                <div>
+                    <button id="objective-button">Select Objective</button>
+                    <span id="objective-display">Not selected</span>
+                </div>
+
+                <div>
+                    <button id="risk-button">Choose Risk Level</button>
+                    <span id="risk-display">Not Selected</span>
+                </div>
+            </section>
+
+            <section class="mission-buttons">
+                <button id="launch-button">INITIATE MISSION</button>
+                <button id="reset-button">RESET MISSION</button>
+            </section>
+
+            <section class="briefing">
+                <p id="briefing-message"></p>
+            </section>
+
+        </main>
+    </body>
+</html>
