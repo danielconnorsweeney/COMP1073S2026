@@ -1,7 +1,7 @@
 const agents = ["Cobra", "Lemur", "Metal", "Genghis"];
 const locations = ["Atlantis Colony", "Venus Base", "Galatic City", "Nova Lab"];
 const weapons = ["Ray Gun", "Zues Cannon", "Wonder Waffe", "Acid Gat"];
-const objective = ["Raid enemy base", "Hack data", "DDOS server", "Rescue solidier"];
+const objectives = ["Raid enemy base", "Hack data", "DDOS server", "Rescue solidier"];
 const risks = ["Low", "Medium", "High", "Extreme"];
 
 let agentIndex = -1;
@@ -30,3 +30,71 @@ const weaponDisplay = document.querySelector("#weapon-display");
 const objectiveDisplay = document.querySelector("#objective-display");
 const riskDisplay = document.querySelector("#risk-display");
 const briefingMessage = document.querySelector("#briefing-message");
+
+
+function changeAgent(){
+    agentIndex++;
+
+    if (agentIndex >= agents.length){
+        agentIndex = 0;
+    }
+
+    selectedAgent = agents[agentIndex];
+    agentDisplay.textContent = selectedAgent;
+}
+
+function changeLocation(){
+    locationIndex++;
+
+    if (locationIndex >= locations.length){
+        locationIndex = 0;
+    }
+
+    selectedLocation = locations[locationIndex];
+    locationDisplay.textContent = selectedLocation;
+}
+
+function changeWeapon(){
+    weaponIndex++;
+
+    if (weaponIndex >= weapons.length){
+        weaponIndex = 0;
+    }
+
+    selectedWeapon = weapons[weaponIndex];
+    weaponDisplay.textContent = selectedWeapon;
+}
+
+function changeObjective(){
+    objectiveIndex++;
+
+    if (objectiveIndex >= objectives[objectiveIndex]){
+        objectiveIndex = 0;
+    }
+
+    selectedObjective = objectives[objectiveIndex];
+    objectiveDisplay.textContent = selectedObjective;
+}
+
+function changeRisk(){
+    riskIndex++;
+
+    if (riskIndex >= risks.length){
+        riskIndex = 0;
+    }
+
+    selectedRisk = risks[riskIndex];
+    riskDisplay.textContent = selectedRisk;
+}
+
+
+
+
+
+
+// EVENT LISTENERS
+agentButton.addEventListener("click", changeAgent);
+locationButton.addEventListener("click", changeLocation);
+weaponButton.addEventListener("click", changeWeapon);
+objectiveButton.addEventListener("click", changeObjective);
+riskButton.addEventListener("click", changeRisk);
