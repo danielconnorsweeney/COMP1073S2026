@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f7f1e8;
+    
+}
+
+header {
+    background-color: #b83227;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #f3e7d5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#student-info {
+    background-color: #fbffc4;
+    font-weight: bold;
+}
