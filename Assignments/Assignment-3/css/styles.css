@@ -29,3 +29,12 @@ section {
     background-color: #fbffc4;
     font-weight: bold;
 }
+
+#order-output {
+    background-color: #f7f1e8;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
