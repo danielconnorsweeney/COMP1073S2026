@@ -5,6 +5,48 @@ studentParagraph.textContent = "Student Name: Daniel Sweeney |  Student ID: 2006
 
 studentInfo.appendChild(studentParagraph);
 
+// Pizza class 
+class Pizza {
+    constructor(customerName, phone, size, crust, sauce, cheese, toppings, quantity, orderType, instructions) {
+        this.customerName = customerName;
+        this.phone = phone;
+        this.size = size;
+        this.crust = crust;
+        this.sauce = sauce;
+        this.cheese = cheese;
+        this.toppings = toppings;
+        this.quantity = quantity;
+        this.orderType = orderType;
+        this.instructions = instructions;
+    }
+
+    // Builds and returns pizza order description as a string
+    buildDescription() {
+        let toppingDescription = this.toppings.join(", ");
+        let specialInstructions = this.instructions;
+
+        if (specialInstructions === "") {
+            specialInstructions = "No special instructions.";
+        }
+
+        return `Thank you, ${this.customerName}!
+
+Phone Number: ${this.phone}
+Order Type: ${this.orderType}
+
+Pizza Size: ${this.size}
+Crust: ${this.crust}
+Sauce: ${this.sauce}
+Cheese: ${this.cheese}
+Toppings: ${toppingDescription}
+Quantity: ${this.quantity}
+
+Special Instructions: ${specialInstructions}
+
+Your pizza order has been created successfully.`;
+    }
+}
+
 // Selectors
 const pizzaForm = document.querySelector("#pizza-form");
 const orderOutput = document.querySelector("#order-output");
@@ -109,17 +151,22 @@ pizzaForm.addEventListener("submit", function(event) {
         toppings.push(selectedToppings[i].value);
     }
 
-    // Testing order inputs are stored properly
-    orderOutput.textContent = `Customer Name: ${customerName}
-Phone Number: ${phone}
-Pizza Size: ${size}
-Crust: ${selectedCrust ? selectedCrust.value : "None selected"}
-Sauce: ${sauce}
-Cheese: ${cheese}
-Toppings: ${toppings.join(", ")}
-Quantity: ${quantity}
-Order Type: ${selectedOrderType ? selectedOrderType.value : "None selected"}
-Special Instructions: ${instructions}`;
+    // Pizza object using form values
+const customerPizza = new Pizza(
+    customerName,
+    phone,
+    size,
+    selectedCrust.value,
+    sauce,
+    cheese,
+    toppings,
+    quantity,
+    selectedOrderType.value,
+    instructions
+);
+
+// Display description with method
+orderOutput.textContent = customerPizza.buildDescription();
 });
 
 
