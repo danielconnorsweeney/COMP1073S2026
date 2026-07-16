@@ -17,135 +17,148 @@
         <main>
             <section id="student-info"></section>
 
-            <section>
-                <h2>Pizza Order Form</h2>
+                <section>
+                    <h2>Pizza Order Form</h2>
+                
+                    <form id="pizza-form">
+                
+                        <div class="form-group">
+                            <label for="customer-name">Customer Name</label>
+                            <input type="text" id="customer-name">
+                            <span class="error" id="name-error"></span>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Example: 7055551234">
+                            <span class="error" id="phone-error"></span>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="size">Pizza Size</label>
+                            <select id="size">
+                                <option value="">Choose a size</option>
+                                <option value="Small">Small - $9.99</option>
+                                <option value="Medium">Medium - $12.99</option>
+                                <option value="Large">Large - $15.99</option>
+                                <option value="Extra Large">Extra Large - $18.99</option>
+                            </select>
+                            <span class="error" id="size-error"></span>
+                        </div>
+                
+                        <div class="option-group">
+                            <p class="group-title">Crust Type</p>
+                
+                            <label>
+                                <input type="radio" name="crust" value="Thin Crust">
+                                Thin Crust
+                            </label>
+                
+                            <label>
+                                <input type="radio" name="crust" value="Regular Crust">
+                                Regular Crust
+                            </label>
+                
+                            <label>
+                                <input type="radio" name="crust" value="Stuffed Crust">
+                                Stuffed Crust
+                            </label>
+                
+                            <span class="error" id="crust-error"></span>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="sauce">Sauce</label>
+                            <select id="sauce">
+                                <option value="">Choose a sauce</option>
+                                <option value="Classic Tomato Sauce">Classic Tomato Sauce</option>
+                                <option value="Garlic White Sauce">Garlic White Sauce</option>
+                                <option value="BBQ Sauce">BBQ Sauce</option>
+                                <option value="Spicy Buffalo Sauce">Spicy Buffalo Sauce</option>
+                            </select>
+                            <span class="error" id="sauce-error"></span>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="cheese">Cheese Level</label>
+                            <select id="cheese">
+                                <option value="">Choose cheese level</option>
+                                <option value="Light Cheese">Light Cheese</option>
+                                <option value="Regular Cheese">Regular Cheese</option>
+                                <option value="Extra Cheese">Extra Cheese</option>
+                                <option value="No Cheese">No Cheese</option>
+                            </select>
+                            <span class="error" id="cheese-error"></span>
+                        </div>
+                
+                        <div class="option-group">
+                            <p class="group-title">Toppings</p>
+                
+                            <label>
+                                <input type="checkbox" name="toppings" value="Pepperoni">
+                                Pepperoni
+                            </label>
+                
+                            <label>
+                                <input type="checkbox" name="toppings" value="Mushrooms">
+                                Mushrooms
+                            </label>
+                
+                            <label>
+                                <input type="checkbox" name="toppings" value="Green Peppers">
+                                Green Peppers
+                            </label>
+                
+                            <label>
+                                <input type="checkbox" name="toppings" value="Onions">
+                                Onions
+                            </label>
+                
+                            <label>
+                                <input type="checkbox" name="toppings" value="Bacon">
+                                Bacon
+                            </label>
+                
+                            <label>
+                                <input type="checkbox" name="toppings" value="Pineapple">
+                                Pineapple
+                            </label>
+                
+                            <span class="error" id="toppings-error"></span>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" min="1" max="10" value="1">
+                            <span class="error" id="quantity-error"></span>
+                        </div>
+                
+                        <div class="option-group">
+                            <p class="group-title">Order Type</p>
+                
+                            <label>
+                                <input type="radio" name="order-type" value="Pickup">
+                                Pickup
+                            </label>
+                
+                            <label>
+                                <input type="radio" name="order-type" value="Delivery">
+                                Delivery
+                            </label>
+                
+                            <span class="error" id="order-type-error"></span>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="instructions">Special Instructions</label>
+                            <textarea id="instructions" placeholder="Example: well done, light sauce, cut into squares"></textarea>
+                        </div>
+                
+                        <button type="submit">Place Order</button>
+                
+                    </form>
+                </section>
             
-                <form id="pizza-form">
-            
-                    <div class="form-group">
-                        <label for="customer-name">Customer Name</label>
-                        <input type="text" id="customer-name">
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="Example: 7055551234">
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="size">Pizza Size</label>
-                        <select id="size">
-                            <option value="">Choose a size</option>
-                            <option value="Small">Small - $9.99</option>
-                            <option value="Medium">Medium - $12.99</option>
-                            <option value="Large">Large - $15.99</option>
-                            <option value="Extra Large">Extra Large - $18.99</option>
-                        </select>
-                    </div>
-            
-                    <div class="option-group">
-                        <p class="group-title">Crust Type</p>
-            
-                        <label>
-                            <input type="radio" name="crust" value="Thin Crust">
-                            Thin Crust
-                        </label>
-            
-                        <label>
-                            <input type="radio" name="crust" value="Regular Crust">
-                            Regular Crust
-                        </label>
-            
-                        <label>
-                            <input type="radio" name="crust" value="Stuffed Crust">
-                            Stuffed Crust
-                        </label>
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="sauce">Sauce</label>
-                        <select id="sauce">
-                            <option value="">Choose a sauce</option>
-                            <option value="Classic Tomato Sauce">Classic Tomato Sauce</option>
-                            <option value="Garlic White Sauce">Garlic White Sauce</option>
-                            <option value="BBQ Sauce">BBQ Sauce</option>
-                            <option value="Spicy Buffalo Sauce">Spicy Buffalo Sauce</option>
-                        </select>
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="cheese">Cheese Level</label>
-                        <select id="cheese">
-                            <option value="">Choose cheese level</option>
-                            <option value="Light Cheese">Light Cheese</option>
-                            <option value="Regular Cheese">Regular Cheese</option>
-                            <option value="Extra Cheese">Extra Cheese</option>
-                            <option value="No Cheese">No Cheese</option>
-                        </select>
-                    </div>
-            
-                    <div class="option-group">
-                        <p class="group-title">Toppings</p>
-            
-                        <label>
-                            <input type="checkbox" name="toppings" value="Pepperoni">
-                            Pepperoni
-                        </label>
-            
-                        <label>
-                            <input type="checkbox" name="toppings" value="Mushrooms">
-                            Mushrooms
-                        </label>
-            
-                        <label>
-                            <input type="checkbox" name="toppings" value="Green Peppers">
-                            Green Peppers
-                        </label>
-            
-                        <label>
-                            <input type="checkbox" name="toppings" value="Onions">
-                            Onions
-                        </label>
-            
-                        <label>
-                            <input type="checkbox" name="toppings" value="Bacon">
-                            Bacon
-                        </label>
-            
-                        <label>
-                            <input type="checkbox" name="toppings" value="Pineapple">
-                            Pineapple
-                        </label>
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" id="quantity" min="1" max="10" value="1">
-                    </div>
-            
-                    <div class="option-group">
-                        <p class="group-title">Order Type</p>
-            
-                        <label>
-                            <input type="radio" name="order-type" value="Pickup">
-                            Pickup
-                        </label>
-            
-                        <label>
-                            <input type="radio" name="order-type" value="Delivery">
-                            Delivery
-                        </label>
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="instructions">Special Instructions</label>
-                        <textarea id="instructions" placeholder="Example: well done, light sauce, cut into squares"></textarea>
-                    </div>
-            
-                    <button type="submit">Place Order</button>
-            
-                </form>
-            </section>
 
             <section>
                 <h2>Your Order</h2>

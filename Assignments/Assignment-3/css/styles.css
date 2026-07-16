@@ -38,3 +38,9 @@ section {
     white-space: pre-line;
 }
 
+.error {
+    display: block;
+    color: #c40000;
+    font-size: 14px;
+    margin-top: 5px;
+}
